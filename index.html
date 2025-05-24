@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSR内部人员登录终端</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <h1>Login In OSR</h1>
+        <h4>保密平台  严禁泄露</h4>
+        <form action="./home.html"> 
+            <!-- <label for="username">用户名</label> -->
+            <input type="text" id="uname" value="" placeholder="用户名"/><br>
+            <input type="password" id="pwd" value="" placeholder="密码"/><br>
+            <input type="submit" id="but" value="登录" onclick="return checkuser()"/> 
+            <!-- 返回了true就会打开页面  -->
+        </form> 
+    </div>
+</body> 
+ 
+<script type="text/javascript"> 
+    function getValue(id) { 
+        return document.getElementById(id).value; 
+        // 查找元素
+    } 
+    function checkuser() { 
+        if(getValue('uname') == "G-OSR-1" && getValue('pwd') == "OSR123") { 
+            return true; 
+        }else { 
+            alert("登录名或密码错误！")
+            // 警告框
+            return false; 
+        } 
+    } 
+</script> 
+</html>
